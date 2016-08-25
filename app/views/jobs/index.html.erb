@@ -27,10 +27,14 @@
         <td><%= job.link %></td>
       </tr>
       <tr>
-        <td>
-        <%= link_to 'Show', job %>
-        <%= link_to 'Edit', edit_job_path(job) %>
-        <%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% if user_signed_in? %>
+          <td>
+          <%= link_to 'Show', job %>
+          <% if job.user == current_user %>
+            <%= link_to 'Edit', edit_job_path(job) %>
+            <%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+        <% end %>
         </td>
       </tr>
     <% end %>
