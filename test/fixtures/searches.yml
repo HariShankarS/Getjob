@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  keywords: MyString
+  languages: MyString
+  salary: 1
+  company: MyString
+
+two:
+  keywords: MyString
+  languages: MyString
+  salary: 1
+  company: MyString
