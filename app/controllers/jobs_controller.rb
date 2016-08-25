@@ -4,7 +4,7 @@ class JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.json
   def index
-    @jobs = Job.all
+    @jobs = Job.where(["description LIKE ?","%#{params[:search]}%"])
   end
 
   # GET /jobs/1
@@ -69,6 +69,6 @@ class JobsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def job_params
-      params.require(:job).permit(:title, :description, :salary, :link)
+      params.require(:job).permit(:title, :description, :company, :salary, :link)
     end
 end

@@ -11,6 +11,10 @@
         <td><%= job.title %></td>
       </tr>
       <tr>
+        <td><strong>Company:</strong></td>
+        <td><% if job.company.present? %><%= job.company %> <% end %></td>
+      </tr>      
+      <tr>
         <td><strong>Description:</strong></td>
         <td><%= job.description %></td>
       </tr>
