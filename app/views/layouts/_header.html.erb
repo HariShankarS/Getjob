@@ -22,12 +22,6 @@
           <li><%= link_to "Sign In", new_user_session_path, class: "active" %></li>
         <% end %>
           <li>
-          <%= form_tag jobs_path, :method => 'get' do %>
-            <%= text_field_tag :search, params[:search] %>
-          <%= submit_tag "Search" %>
-          <% end %>  <br />
-          </li>
-          <li><%= link_to "Advanced Search", new_search_path %></li>
       </ul>
 
     </div><!-- /.navbar-collapse -->
